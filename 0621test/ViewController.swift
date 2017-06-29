@@ -50,7 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set transform of node to be 10cm in front of camera
         var translation = matrix_identity_float4x4
-        translation.columns.3.x = -0.1 // 0.1 to represent 10 cm (because dafault is 1M)
+        translation.columns.3.x = -0.01 // 0.1 to represent 10 cm (because dafault is 1M)
         planeNode.simdTransform = matrix_multiply(currentFrame.camera.transform, translation)
     }
     
